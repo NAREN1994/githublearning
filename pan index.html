@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Document Generation</title>
+        <link rel="stylesheet" href="text-2.css">
+    </head>
+    <body>
+        <div class="container">
+            <form id="Form1">
+            <h3>SELECT DOCUMENT</h3>
+            <p>Document Type</p>
+                <select name="Document Type">
+                    <option value="----select document----">----select document----</option>
+                     <option value="PAN CARD">PAN CARD</option>
+                      <option value="CREDIT CARD">CREDIT CARD</option>
+                       <option value="DEBIT CARD">DEBIT CARD</option>
+              <spacer type="vertical" width="1000" height="1000" </spacer>
+                </select>
+                <p>Application Type</p>
+                <select name="Application Type">
+                    <option value="----select type----">----select type----</option>
+                    <option value="New Pan-Indian Citizen">New Pan-Indian Citizen</option>
+                    <option value="New Pan-Foreign Citizen">New Pan-Foreign Citizen</option>
+                    <option value="">none</option>
+                    
+                </select>
+                <p>Category</p>
+                <select name="Category">
+                    <option value="----select type----">----select type----</option>
+                    <option value="Individual">Individual</option>
+                    <option value="Trust">Trust</option>
+                    <option value="Firm">Firm</option>
+                    <option value="">none</option>
+                </select>
+                <p>title</p>
+                <select name="title">
+                    <option value="----select type----">----select type----</option>
+                    <option value="shri">shri</option>
+                    <option value="Smt">Smt</option>
+                    <option value="kumari">kumari</option>
+                </select>
+                <div class="btn-box">
+                    <button type="button" id="Next1">Next</button>
+            </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>step 1</small></div>
+            <div class="step-col"><small>step 2</small></div>
+            <div class="step-col"><small>step 3</small></div>
+        </div>
+        
+        
+        
+        
+        
+        
+            <form id="Form2">
+                <h3>PERSONAL INFORMATION</h3>
+                 <input type="text" placeholder="First Name" required>
+                 <input type="text" placeholder="Middle Name" required>
+                 <input type="text" placeholder="Last Name" required>
+                 <input type="text" placeholder="email" required>
+                <input type="text" placeholder="mobile number" required>
+                  <div class="btn-box">
+                    <button type="button" id="Back1">Back</button>
+                    <button type="button" id="Next2">Next</button>
+            </form>
+            
+            
+            
+            <form id="Form3">
+                <h3>REQUIRED DOCUMENTS</h3>
+                <input type="Account Number" placeholder="Account Number" required>
+                <input type="IFSE CODE" placeholder="IFSE CODE" required>
+                 <P>Adhar Card</P>
+                 <input type="File">
+                  <P>PAN CARD(for credit/debit card)</P>
+                  <input type="file">
+                  <p>Photocopy</p>
+                  <input type="file">
+                  <p>Signature</p>
+                  <input type="file">
+                 
+                  <div class="btn-box">
+                    <button type="button" id="Back2">Back</button>
+                    <button type="Submit">Submit</button>
+            </form>
+      <script>
+        
+        var Form1 = document.getElementById("Form1");
+        var Form2 = document.getElementById("Form2");
+        var Form3 = document.getElementById("Form3");
+        
+        var Next1 = document.getElementById("Next1");
+        var Next2 = document.getElementById("Next2");
+        var Back1 = document.getElementById("Back1");
+        var Back2 = document.getElementById("Back2");
+        
+        var progress = document.getElementById("progress");
+        
+        Next1.onclick = function(){
+            Form1.style.left = "-450px";
+            Form2.style.left = "40px";
+            progress.style.width = "240px";
+            
+        };
+        
+        Back1.onclick = function(){
+            Form1.style.left = "40px";
+            Form2.style.left = "450px";
+            progress.style.width = "120px";
+        };
+        
+        Next2.onclick = function(){
+            Form2.style.left = "-450px";
+            Form3.style.left = "40px";
+            progress.style.width = "360px";
+        };
+        
+        Back2.onclick = function(){
+            Form2.style.left = "40px";
+            Form3.style.left = "450px";
+            progress.style.width = "240px";
+        };
+        
+        
+      </script>
+      
+      
+      
+      
+      
+    </body>
+</html>
